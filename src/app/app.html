@@ -1,1 +1,12 @@
 <h1>Contextual Variables</h1>
+@for(user of users; track user; let i = $index) {
+  @if($first || $last) {
+    <p style="background-color: red;">this is our {{i+1}} user and name is {{user}}</p>
+  }
+  @else if (i==5) {
+    <p style="background-color: green;">this is our {{i+1}} user and name is {{user}}</p>
+  }
+  @else {
+    <p>this is our {{i+1}} user and name is {{user}}</p>
+  }
+}
