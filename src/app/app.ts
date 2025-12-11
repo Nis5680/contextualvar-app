@@ -7,5 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  users=['Nishit','Raj','Sanjay','Kenil','Jay','Nemil','Anna','Gautam','Hetak', 'Mohit'];
+   users=['Nishit','Raj','Sanjay','Kenil','Jay','Nemil','Anna','Gautam','Hetak', 'Mohit'];
+  //users=[];
 }

@@ -1,6 +1,6 @@
 <h1>Contextual Variables</h1>
-@for(user of users; track user; let i = $index) {
-  @if($first || $last) {
+@for(user of users; track user; let i = $index; let f = $first; let l = $last; let oo = $odd) {
+  <!-- @if(f || l) {
     <p style="background-color: red;">this is our {{i+1}} user and name is {{user}}</p>
   }
   @else if (i==5) {
@@ -8,5 +8,15 @@
   }
   @else {
     <p>this is our {{i+1}} user and name is {{user}}</p>
-  }
+  } -->
+    @if(oo) {
+      <p style="background-color: lightgray;">this is our {{i}} user and name is {{user}}</p>
+    }
+    @else {
+      <p style="background-color: red;">this is our {{i}} user and name is {{user}}</p>
+    }    
+}
+
+@empty(){
+  <p>No users available</p>
 }
